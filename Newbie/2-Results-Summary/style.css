@@ -1,0 +1,197 @@
+:root {
+    /* Primary */
+    --light-red: 0, 100%, 67%;
+    --orangey-yellow: 39, 100%, 56%;
+    --green-teal: 166, 100%, 37%;
+    --cobalt-blue: 234, 85%, 45%;
+
+    /* Gradients */
+    /*background*/
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    /*circle*/
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Use transparency to get the colour variations 
+    necessary to match the design. 
+    Hint: look into using `hsla()`. */
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Hanken Grotesk', sans-serif;
+    /* Medium 500 - Bold 700 - Extra Bold 800 */
+}
+
+/* LEFT SECTION */
+#result-section {
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    padding: 20px 60px 40px;
+    color: var(--light-lavender);
+    width: 100%;
+}
+
+#result-section,
+button:hover {
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+section #circle {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+section #circle span {
+    color: hsla(241, 100%, 89%, 0.5);
+}
+
+h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+h2,
+h3 {
+    color: var(--white);
+}
+
+section p,
+section #circle span {
+    font-size: 0.8rem;
+}
+
+/* RIGHT ASIDE */
+#summary-data section:nth-child(1) {
+    background-color: hsla(var(--light-red), 0.1);
+    color: hsl(var(--light-red));
+}
+
+#summary-data section:nth-child(2) {
+    background-color: hsla(var(--orangey-yellow), 0.1);
+    color: hsl(var(--orangey-yellow));
+}
+
+#summary-data section:nth-child(3) {
+    background-color: hsla(var(--green-teal), 0.1);
+    color: hsl(var(--green-teal));
+}
+
+#summary-data section:nth-child(4) {
+    background-color: hsla(var(--cobalt-blue), 0.1);
+    color: hsl(var(--cobalt-blue));
+}
+
+aside {
+    margin: 25px 28px;
+}
+
+#summary-data section {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.icon-and-category {
+    display: flex;
+}
+
+.icon-and-category object {
+    padding-right: 10px;
+    position: relative;
+    bottom: .125em;
+}
+
+#summary-data {
+    margin: 25px 0px;
+}
+
+#summary-data section p,
+#summary-data section span {
+    font-size: 0.8rem;
+}
+
+aside h1 {
+    font-weight: 700;
+}
+
+button {
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+}
+
+.score-text {
+    color: var(--dark-gray-blue);
+}
+
+#summary-data p span {
+    color: hsla(224, 30%, 27%, 0.5);
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        height: 410px;
+        width: 650px;
+        border-radius: 25px;
+        box-shadow: 10px 8px 20px 1px rgba(235, 241, 255, 0.6);
+        -webkit-box-shadow: 10px 8px 20px 1px rgba(235, 241, 255, 0.6);
+        -moz-box-shadow: 10px 8px 20px 1px rgba(235, 241, 255, 0.6);
+    }
+
+    #result-section {
+        border-radius: 25px;
+        width: 350px;
+        padding: 50px 80px 50px;
+    }
+
+    aside {
+        min-width: 250px;
+    }
+
+    aside section {
+        padding: 10px;
+    }
+}
